@@ -1,0 +1,11 @@
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/sizes";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+.container {
+  max-width: sizes.$desktop;
+  width: 94%;
+  margin: 0 auto;
+}

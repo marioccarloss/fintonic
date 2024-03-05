@@ -1,0 +1,66 @@
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+.typography {
+  align-self: center;
+  display: inline-flex;
+  color: colors.$white;
+  text-decoration: none;
+  gap: 0.3125rem;
+
+  &--title {
+    font-size: 3rem;
+    padding: spacing.$tiny 0;
+  }
+
+  &--subtitle {
+    font-size: 2rem;
+  }
+
+  &--body {
+    font: typography.$font--tertinary;
+  }
+
+  &--caption {
+    font: typography.$font--tertinary;
+  }
+
+  &--label {
+    font: typography.$font--tertinary;
+    font-weight: bold;
+  }
+
+  &--error {
+    font: typography.$font--tertinary;
+    color: colors.$error;
+  }
+
+  &--icon {
+    display: flex;
+    gap: spacing.$tiny;
+  }
+
+  &--left {
+    text-align: left;
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+
+  &--right {
+    text-align: right;
+    align-self: flex-end;
+    justify-content: flex-end;
+  }
+
+  &--center {
+    text-align: center;
+    align-self: center;
+    justify-content: center;
+  }
+
+  &--justify {
+    text-align: justify;
+  }
+}

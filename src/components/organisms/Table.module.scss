@@ -1,0 +1,102 @@
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/sizes";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-bottom: 2rem;
+  width: 100%;
+
+  &Wrapper {
+    overflow-x: auto;
+    width: 100%;
+  }
+
+  &Pagination {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    button {
+      appearance: none;
+      border: 0;
+      background-color: colors.$pagination;
+      color: colors.$white;
+      padding: spacing.$md;
+      font-weight: bold;
+
+      &:first-child {
+        border-bottom-left-radius: 6px;
+        border-top-left-radius: 6px;
+      }
+
+      &:last-child {
+        border-bottom-right-radius: 6px;
+        border-top-right-radius: 6px;
+      }
+
+      &.active {
+        background-color: colors.$pagination-hover;
+      }
+    }
+  }
+
+  &Search {
+    background-color: colors.$white;
+    border-radius: border.$radius-medium;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    margin-bottom: spacing.$md;
+    position: relative;
+    max-width: 22rem;
+    width: 100%;
+
+    span {
+      color: colors.$bg-dark;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      right: spacing.$sm;
+      width: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    input {
+      appearance: none;
+      border: 0;
+      padding: spacing.$sm spacing.$md spacing.$sm spacing.$lg;
+      width: 100%;
+    }
+  }
+
+  th,
+  td {
+    border: 1px solid colors.$tb-spacing;
+    padding: spacing.$xs;
+    text-align: left;
+  }
+
+  th {
+    background-color: colors.$tb-heading;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: spacing.$tiny;
+    }
+  }
+
+  td {
+    background-color: colors.$tb-row;
+  }
+
+  &__arrow,
+  &__link {
+    color: colors.$link;
+  }
+}

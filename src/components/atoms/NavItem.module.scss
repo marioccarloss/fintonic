@@ -1,0 +1,36 @@
+@use "../settings/border";
+@use "../settings/colors";
+@use "../settings/sizes";
+@use "../settings/spacing";
+@use "../settings/typography";
+
+.navItem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+
+  a {
+    background-color: colors.$black-light;
+    color: colors.$white;
+    display: flex;
+    gap: spacing.$tiny;
+    font: typography.$font--secondary;
+    padding: 0.3125rem spacing.$xxs;
+
+    &:hover {
+      background-color: colors.$bg;
+    }
+  }
+
+  a,
+  span {
+    display: flex;
+    align-items: center;
+  }
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+  }
+}
